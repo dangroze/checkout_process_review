@@ -11,4 +11,9 @@ RSpec.describe Supermarket do
       expect(supermarket.checkout('ABCD')).to eq(115)
     end
   end
+  describe('#add_discount') do
+    it('Calculates a discount for multiple items') do
+      expect(supermarket.checkout('AAABB')).to eq(175)
+    end
+  end
 end
